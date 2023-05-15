@@ -1,0 +1,36 @@
+//
+//  RickAndMorty.swift
+//  RickandMortyAppAPI
+//
+//  Created by Александр Полочанин on 15.05.23.
+//
+
+import Foundation
+
+
+struct RickAndMorty: Decodable {
+    let info: Info
+    var results: [Character]
+
+}
+
+struct Info: Decodable {
+    let pages: Int
+    let next: URL?
+    let prev: URL?
+}
+
+struct Character:Decodable {
+    let name: String
+    let status: String
+    let species: String
+    let gender: String
+    let image: String
+    let location: Location
+    let origin: Location
+    
+}
+
+struct Location: Decodable {
+    let name: String
+}
