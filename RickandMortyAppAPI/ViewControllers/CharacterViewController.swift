@@ -9,9 +9,24 @@ import UIKit
 
 class CharacterViewController: UIViewController {
 
+    @IBOutlet var characterImage: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var speciesLabel: UILabel!
+    
+    var character: Character!
+    private let networkManager = NetworkManager.shared
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        nameLabel.text = character.name
+        speciesLabel.text = character.species
+        
+        networkManager.fetchImage(with: character.image) { [weak self] imageData in
+            self?.characterImage.image = UIImage(data: imageData)
+        }
     }
 
 
