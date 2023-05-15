@@ -25,7 +25,7 @@ struct Character:Decodable {
     let status: String
     let species: String
     let gender: String
-    let image: String
+    let image: URL
     let location: Location
     let origin: Location
     
