@@ -15,10 +15,20 @@ class CharacterListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchRickAndMorty()
+        fetchRickAndMorty(with: Link.urlRickAndMorty.url)
        
     }
 
+    @IBAction func updateData(_ sender: UIBarButtonItem) {
+        if sender.tag == 1 {
+            guard let nextURL = rickAndMorty?.info.next else { return print(NetworkError.invalidURL)}
+            fetchRickAndMorty(with: nextURL)
+        } else {
+            guard let prevURL = rickAndMorty?.info.prev else { return print(NetworkError.invalidURL)}
+            fetchRickAndMorty(with: prevURL)
+        }
+    }
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         rickAndMorty?.results.count ?? 0
@@ -52,8 +62,8 @@ class CharacterListViewController: UITableViewController {
 }
 
 extension CharacterListViewController {
-    func fetchRickAndMorty() {
-        networkManager.fetchRickAndMortyData(with: Link.urlRickAndMorty.url) { [weak self] result in
+    func fetchRickAndMorty(with url: URL) {
+        networkManager.fetchRickAndMortyData(with: url) { [weak self] result in
             switch result {
             case .success(let rickAndMorty):
                 self?.rickAndMorty = rickAndMorty

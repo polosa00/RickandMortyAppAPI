@@ -109,7 +109,18 @@
                             <outlet property="delegate" destination="UfG-RJ-zHa" id="dZV-zL-TkF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="RICK &amp; MORTY" id="v5I-cr-d9D"/>
+                    <navigationItem key="navigationItem" title="RICK &amp; MORTY" id="v5I-cr-d9D">
+                        <barButtonItem key="leftBarButtonItem" title="Prev" id="rVe-Gr-XfX">
+                            <connections>
+                                <action selector="updateData:" destination="UfG-RJ-zHa" id="Ks6-Gg-4bF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" tag="1" title="Next" id="40F-ms-jdd">
+                            <connections>
+                                <action selector="updateData:" destination="UfG-RJ-zHa" id="BlA-Zy-xoD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxW-c0-eRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
