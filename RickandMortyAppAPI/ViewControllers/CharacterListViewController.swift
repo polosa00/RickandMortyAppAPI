@@ -20,13 +20,10 @@ class CharacterListViewController: UITableViewController {
     }
 
     @IBAction func updateData(_ sender: UIBarButtonItem) {
-        if sender.tag == 1 {
-            guard let nextURL = rickAndMorty?.info.next else { return print(NetworkError.invalidURL)}
-            fetchRickAndMorty(with: nextURL)
-        } else {
-            guard let prevURL = rickAndMorty?.info.prev else { return print(NetworkError.invalidURL)}
-            fetchRickAndMorty(with: prevURL)
-        }
+         sender.tag == 1
+            ? fetchRickAndMorty(with: rickAndMorty?.info.next)
+            : fetchRickAndMorty(with: rickAndMorty?.info.prev)
+        
     }
     
     // MARK: - Table view data source
@@ -62,7 +59,9 @@ class CharacterListViewController: UITableViewController {
 }
 
 extension CharacterListViewController {
-    func fetchRickAndMorty(with url: URL) {
+    func fetchRickAndMorty(with url: URL?) {
+        guard let url else { return print(NetworkError.invalidURL) }
+        
         networkManager.fetchRickAndMortyData(with: url) { [weak self] result in
             switch result {
             case .success(let rickAndMorty):

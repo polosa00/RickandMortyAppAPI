@@ -30,11 +30,18 @@ class CharacterViewController: UIViewController {
         
         nameLabel.text = character.name
         speciesLabel.text = character.species
-        typeLabel.text = character.type
         genderLabel.text = character.gender
         originLabel.text = character.origin.name
         locationLabel.text = character.location.name
         createdLabel.text = character.created
+        
+        if character.type != "" {
+            typeLabel.text = character.type
+        } else {
+            typeLabel.text = "-"
+        }
+        
+        
         
         networkManager.fetchImage(with: character.image) { [weak self] imageData in
             self?.characterImage.image = UIImage(data: imageData)
