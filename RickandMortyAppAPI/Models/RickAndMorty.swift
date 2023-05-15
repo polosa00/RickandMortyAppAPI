@@ -24,10 +24,12 @@ struct Character:Decodable {
     let name: String
     let status: String
     let species: String
+    let type: String
     let gender: String
     let image: URL
     let location: Location
     let origin: Location
+    let created: String
     
 }
 
