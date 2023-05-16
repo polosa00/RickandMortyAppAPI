@@ -28,6 +28,7 @@ struct Character:Decodable {
     let image: String
     let location: Location
     let origin: Location
+    let created: String
     
 }
 

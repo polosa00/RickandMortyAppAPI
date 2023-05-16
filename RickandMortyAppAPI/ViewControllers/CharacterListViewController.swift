@@ -41,20 +41,22 @@ class CharacterListViewController: UICollectionViewController {
         ? fetchRickAndMorty(with: rickAndMorty?.info.next)
         : fetchRickAndMorty(with: rickAndMorty?.info.prev)
     }
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showCharacter" {
+            guard let characterVC = segue.destination as? CharacterViewController else { return }
+            guard let cell = sender as? CharacterViewCell else { return }
+            guard let indexPath = collectionView.indexPath(for: cell) else { return }
+            let character = rickAndMorty?.results[indexPath.row]
+            characterVC.character = character
+            
+        }
+
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
-
-   
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
