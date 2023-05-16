@@ -13,10 +13,11 @@
 		11195DEC2A12C4F0002267DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11195DEA2A12C4F0002267DD /* Main.storyboard */; };
 		11195DEE2A12C4F1002267DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11195DED2A12C4F1002267DD /* Assets.xcassets */; };
 		11195DF12A12C4F1002267DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11195DEF2A12C4F1002267DD /* LaunchScreen.storyboard */; };
-		11195DF92A12C58B002267DD /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11195DF82A12C58B002267DD /* CharacterListViewController.swift */; };
-		11195DFE2A12C666002267DD /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11195DFD2A12C666002267DD /* CharacterViewCell.swift */; };
 		11195E012A12C688002267DD /* RickAndMorty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11195E002A12C688002267DD /* RickAndMorty.swift */; };
 		11195E042A12C69F002267DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11195E032A12C69F002267DD /* NetworkManager.swift */; };
+		11195E0C2A13D216002267DD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 11195E0B2A13D216002267DD /* Alamofire */; };
+		11195E0E2A13D289002267DD /* CharacterListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11195E0D2A13D289002267DD /* CharacterListViewController.swift */; };
+		11195E102A13D2E8002267DD /* CharacterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11195E0F2A13D2E8002267DD /* CharacterViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,10 @@
 		11195DED2A12C4F1002267DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11195DF02A12C4F1002267DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11195DF22A12C4F1002267DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11195DF82A12C58B002267DD /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
-		11195DFD2A12C666002267DD /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
 		11195E002A12C688002267DD /* RickAndMorty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorty.swift; sourceTree = "<group>"; };
 		11195E032A12C69F002267DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		11195E0D2A13D289002267DD /* CharacterListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewController.swift; sourceTree = "<group>"; };
+		11195E0F2A13D2E8002267DD /* CharacterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11195E0C2A13D216002267DD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				11195DE82A12C4F0002267DD /* CharacterViewController.swift */,
-				11195DF82A12C58B002267DD /* CharacterListViewController.swift */,
+				11195E0D2A13D289002267DD /* CharacterListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,7 +108,7 @@
 		11195DFF2A12C66B002267DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				11195DFD2A12C666002267DD /* CharacterViewCell.swift */,
+				11195E0F2A13D2E8002267DD /* CharacterViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +153,9 @@
 			dependencies = (
 			);
 			name = RickandMortyAppAPI;
+			packageProductDependencies = (
+				11195E0B2A13D216002267DD /* Alamofire */,
+			);
 			productName = RickandMortyAppAPI;
 			productReference = 11195DE12A12C4F0002267DD /* RickandMortyAppAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +184,9 @@
 				Base,
 			);
 			mainGroup = 11195DD82A12C4F0002267DD;
+			packageReferences = (
+				11195E0A2A13D216002267DD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 11195DE22A12C4F0002267DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,12 +215,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				11195E012A12C688002267DD /* RickAndMorty.swift in Sources */,
-				11195DF92A12C58B002267DD /* CharacterListViewController.swift in Sources */,
+				11195E102A13D2E8002267DD /* CharacterViewCell.swift in Sources */,
 				11195E042A12C69F002267DD /* NetworkManager.swift in Sources */,
 				11195DE92A12C4F0002267DD /* CharacterViewController.swift in Sources */,
 				11195DE52A12C4F0002267DD /* AppDelegate.swift in Sources */,
+				11195E0E2A13D289002267DD /* CharacterListViewController.swift in Sources */,
 				11195DE72A12C4F0002267DD /* SceneDelegate.swift in Sources */,
-				11195DFE2A12C666002267DD /* CharacterViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11195E0A2A13D216002267DD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11195E0B2A13D216002267DD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11195E0A2A13D216002267DD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11195DD92A12C4F0002267DD /* Project object */;
 }
