@@ -16,9 +16,9 @@ class CharacterListViewController: UICollectionViewController {
     private let itemsPerRow: CGFloat = 2
     private let sectionInserts = UIEdgeInsets(
         top: 20,
-        left: 20,
+        left: 15,
         bottom: 20,
-        right: 20
+        right: 15
     )
     
     
@@ -127,6 +127,7 @@ extension CharacterListViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         sectionInserts.left
+
     }
 
 }

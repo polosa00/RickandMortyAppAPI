@@ -24,14 +24,14 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="characterCell" id="9tV-49-5Gl" customClass="CharacterViewCell" customModule="RickandMortyAppAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="178" height="264"/>
+                                <rect key="frame" x="0.0" y="0.0" width="162" height="264"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="178" height="264"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="264"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWm-l1-Oh3">
-                                            <rect key="frame" x="0.0" y="0.0" width="161" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="162" height="209"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -43,7 +43,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-i5-1sO">
-                                            <rect key="frame" x="64.666666666666657" y="157.66666666666666" width="31.666666666666671" height="14.333333333333343"/>
+                                            <rect key="frame" x="0.0" y="209" width="162" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,7 +56,7 @@
                                         </label>
                                     </subviews>
                                 </view>
-                                <size key="customSize" width="178" height="264"/>
+                                <size key="customSize" width="162" height="264"/>
                                 <connections>
                                     <outlet property="characterImage" destination="BWm-l1-Oh3" id="b3y-0l-MCL"/>
                                     <outlet property="nameLabel" destination="MyU-i5-1sO" id="rYx-QT-V9y"/>
