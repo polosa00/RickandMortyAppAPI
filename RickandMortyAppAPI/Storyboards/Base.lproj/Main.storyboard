@@ -16,23 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xra-vl-mUW">
-                            <size key="itemSize" width="161" height="173"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xra-vl-mUW">
+                            <size key="itemSize" width="162" height="241"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="characterCell" id="9tV-49-5Gl" customClass="CharacterViewCell" customModule="RickandMortyAppAPI" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="162" height="264"/>
+                                <rect key="frame" x="0.0" y="0.0" width="162" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="162" height="264"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="241"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BWm-l1-Oh3">
-                                            <rect key="frame" x="0.0" y="0.0" width="162" height="209"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWm-l1-Oh3">
+                                            <rect key="frame" x="0.0" y="0.0" width="162" height="202.66666666666666"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="BWm-l1-Oh3" secondAttribute="height" multiplier="1:1.25" id="MfP-iF-6MU"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <integer key="value" value="12"/>
@@ -42,9 +44,8 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-i5-1sO">
-                                            <rect key="frame" x="0.0" y="209" width="162" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-i5-1sO">
+                                            <rect key="frame" x="8" y="212.66666666666666" width="146" height="14.333333333333343"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -56,7 +57,17 @@
                                         </label>
                                     </subviews>
                                 </view>
-                                <size key="customSize" width="162" height="264"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="BWm-l1-Oh3" secondAttribute="trailing" id="0gh-3I-1Ug"/>
+                                    <constraint firstItem="BWm-l1-Oh3" firstAttribute="leading" secondItem="9tV-49-5Gl" secondAttribute="leading" id="G1l-uP-MPY"/>
+                                    <constraint firstItem="MyU-i5-1sO" firstAttribute="leading" secondItem="9tV-49-5Gl" secondAttribute="leadingMargin" id="ONR-cq-6nJ"/>
+                                    <constraint firstItem="BWm-l1-Oh3" firstAttribute="top" secondItem="9tV-49-5Gl" secondAttribute="top" id="QiW-S9-caR"/>
+                                    <constraint firstItem="MyU-i5-1sO" firstAttribute="centerX" secondItem="9tV-49-5Gl" secondAttribute="centerX" id="Qka-uB-49p"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MyU-i5-1sO" secondAttribute="trailing" id="VOR-Xk-LkN"/>
+                                    <constraint firstItem="MyU-i5-1sO" firstAttribute="top" secondItem="BWm-l1-Oh3" secondAttribute="bottom" constant="10" id="YmH-ss-BHZ"/>
+                                    <constraint firstItem="BWm-l1-Oh3" firstAttribute="centerX" secondItem="9tV-49-5Gl" secondAttribute="centerX" id="jTH-ae-GFb"/>
+                                </constraints>
+                                <size key="customSize" width="162" height="241"/>
                                 <connections>
                                     <outlet property="characterImage" destination="BWm-l1-Oh3" id="b3y-0l-MCL"/>
                                     <outlet property="nameLabel" destination="MyU-i5-1sO" id="rYx-QT-V9y"/>

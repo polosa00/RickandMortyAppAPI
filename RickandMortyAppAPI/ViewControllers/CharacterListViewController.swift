@@ -115,7 +115,7 @@ extension CharacterListViewController: UICollectionViewDelegateFlowLayout {
         let paddingWidth = sectionInserts.left * (itemsPerRow + 1)
         let availableWidht = collectionView.frame.width - paddingWidth
         let widhtPerItem = availableWidht / itemsPerRow
-        return CGSize(width: widhtPerItem, height: widhtPerItem + 80)
+        return CGSize(width: widhtPerItem, height: widhtPerItem + 65)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
