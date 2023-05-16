@@ -60,7 +60,6 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="BWm-l1-Oh3" secondAttribute="trailing" id="0gh-3I-1Ug"/>
                                     <constraint firstItem="BWm-l1-Oh3" firstAttribute="leading" secondItem="9tV-49-5Gl" secondAttribute="leading" id="G1l-uP-MPY"/>
-                                    <constraint firstItem="MyU-i5-1sO" firstAttribute="leading" secondItem="9tV-49-5Gl" secondAttribute="leadingMargin" id="ONR-cq-6nJ"/>
                                     <constraint firstItem="BWm-l1-Oh3" firstAttribute="top" secondItem="9tV-49-5Gl" secondAttribute="top" id="QiW-S9-caR"/>
                                     <constraint firstItem="MyU-i5-1sO" firstAttribute="centerX" secondItem="9tV-49-5Gl" secondAttribute="centerX" id="Qka-uB-49p"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="MyU-i5-1sO" secondAttribute="trailing" id="VOR-Xk-LkN"/>
@@ -80,7 +79,25 @@
                             <outlet property="delegate" destination="ljP-p5-35B" id="yXG-4Q-Ymy"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="RiCK and MORTY" id="TeP-b1-vqd"/>
+                    <navigationItem key="navigationItem" title="RiCK and MORTY" id="TeP-b1-vqd">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="backward.end.fill" catalog="system" id="cBm-jg-2uN">
+                            <connections>
+                                <action selector="updateData:" destination="ljP-p5-35B" id="9Sv-KM-3db"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem tag="1" title="Item" image="forward.end.fill" catalog="system" id="3CB-Gx-1J5">
+                                <connections>
+                                    <action selector="updateData:" destination="ljP-p5-35B" id="rwk-KV-yrR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="clear" catalog="system" id="AxS-aJ-GCF">
+                                <connections>
+                                    <action selector="clearCache:" destination="ljP-p5-35B" id="p1w-0U-Ypr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBV-ve-RSw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +139,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backward.end.fill" catalog="system" width="128" height="101"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <image name="forward.end.fill" catalog="system" width="128" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

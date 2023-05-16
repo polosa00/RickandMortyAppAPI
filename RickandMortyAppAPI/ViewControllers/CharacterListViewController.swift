@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 private let reuseIdentifier = "characterCell"
 
@@ -27,7 +28,19 @@ class CharacterListViewController: UICollectionViewController {
         super.viewDidLoad()
         fetchRickAndMorty(with: Link.urlRickAndMorty.url)
     }
-
+    @IBAction func clearCache(_ sender: UIBarButtonItem) {
+        let cache = ImageCache.default
+        cache.clearMemoryCache()
+        cache.clearDiskCache {
+            print("Done")
+        }
+    }
+    
+    @IBAction func updateData(_ sender: UIBarButtonItem) {
+        sender.tag == 1
+        ? fetchRickAndMorty(with: rickAndMorty?.info.next)
+        : fetchRickAndMorty(with: rickAndMorty?.info.prev)
+    }
     /*
     // MARK: - Navigation
 
@@ -96,7 +109,9 @@ class CharacterListViewController: UICollectionViewController {
 
 }
 extension CharacterListViewController {
-    private func fetchRickAndMorty(with url: URL) {
+    private func fetchRickAndMorty(with url: URL?) {
+        
+        guard let url else { return print("Invalid URL!") }
         networkManager.fetchRickAndMorty(with: url) { [weak self] result in
             switch result {
             case .success(let rickAndMorty):
